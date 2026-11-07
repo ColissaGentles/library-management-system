@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab: Library Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Library Management Dashboard</h1>
+      <p>Catalog, borrow and return books seamlessly</p>
+    </header>
+
+    <main>
+      <!-- Form Section to Add Books -->
+      <section class="form-section">
+        <h2>Add a New Book</h2>
+        <form id="book-form">
+          <div class="input-group">
+            <label for="book-title">Book Title</label>
+            <input
+              type="text"
+              id="book-title"
+              placeholder="e.g., Clean Code"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="book-author">Author</label>
+            <input
+              type="text"
+              id="book-author"
+              placeholder="e.g., Robert C. Martin"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="book-category">Category</label>
+            <select id="book-category">
+              <option value="low">Fiction</option>
+              <option value="medium" selected>Non-Fiction</option>
+              <option value="high">Reference</option>
+            </select>
+          </div>
+
+          <button type="submit" id="add-btn">Add Book</button>
+        </form>
+      </section>
+
+      <!-- Display Section for Books -->
+      <section class="list-section">
+        <h2>Library Catalog</h2>
+        <div id="book-list">
+          <!-- Dynamically generated book items will go here -->
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
